@@ -1,5 +1,6 @@
 import { client } from '@/app/lib/sanity';
 import Link from 'next/link';
+import PopularBikeCaroussel from './PopularBikeCaroussel';
 
 // get data
 const getData = async () => {
@@ -29,7 +30,8 @@ const PopularBikes = async () => {
           The world's Premium Brands In One Destination.
         </p>
 
-        <div>Carousel</div>
+        <PopularBikeCaroussel bikes={bikes} />
+
         <Link href={'/our-bikes'}>
           <button className='mx-auto btn btn-accent'>See all bikes</button>
         </Link>
