@@ -1,3 +1,4 @@
+'use client';
 import { useShoppingCart } from 'use-shopping-cart';
 import { useToast } from './ui/use-toast';
 
@@ -11,6 +12,7 @@ const AddToCartBtn = ({
   description,
   images,
   price,
+  price_id,
 }) => {
   const { addItem } = useShoppingCart();
   const { toast } = useToast();
@@ -22,6 +24,7 @@ const AddToCartBtn = ({
     description: description,
     images: images,
     price: price,
+    price_id: price_id,
   };
 
   return (

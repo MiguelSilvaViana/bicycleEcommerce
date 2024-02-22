@@ -59,6 +59,12 @@ const ProductDetails = async ({ params }) => {
               </div>
               <p>{bike.description}</p>
               <AddToCartBtn
+                price_id={bike.price_id}
+                name={bike.name}
+                currency={'USD'}
+                description={bike.description}
+                images={bike.images}
+                price={bike.price}
                 text={'Add to cart'}
                 btnStyles={'btn btn-accent'}
               />
