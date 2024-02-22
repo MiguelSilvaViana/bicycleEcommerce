@@ -31,6 +31,12 @@ const Bike = ({ bike }) => {
         {/* btn group */}
         <div className='absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300'>
           <AddToCartBtn
+            id={bike._id}
+            name={bike.name}
+            currency={'USD'}
+            description={bike.description}
+            images={bike.images}
+            price={bike.price}
             btnStyles={'btn-icon btn-accent'}
             icon={<CgShoppingBag />}
           />
