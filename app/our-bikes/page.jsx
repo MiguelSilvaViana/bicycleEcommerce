@@ -1,25 +1,28 @@
 import { client } from '@/app/lib/sanity';
+import BikeCategories from '@/components/BikeCategories';
 
 const getData = async () => {
   const query = `*[_type == 'product'] {
-  _id, // ID do produto
-  name, // Nome do produto
-  description, // Descrição do produto
-  images, // Imagens do produto
-  price, // Preço do produto
-  price_id, // ID do preço do produto
-  "slug": slug.current, // Slug do produto
-  "categories": categories[]->{ // Categorias do produto
-    name // Nome da categoria
-  }
+  _id, 
+  name, 
+  description, 
+  images, 
+  price,
+  price_id,
+  "slug": slug.current,
+  "categories": categories[]->{name}
  }`;
   const data = await client.fetch(query);
   return data;
 };
 const OurBikes = async () => {
   const bikes = await getData();
-  console.log(bikes);
-  return <div>OurBikes</div>;
+  // console.log(bikes);
+  return (
+    <div>
+      <BikeCategories bikes={bikes} />
+    </div>
+  );
 };
 
 export default OurBikes;
