@@ -24,7 +24,7 @@ const BikeCategories = ({ bikes }) => {
     setFilteredBikes(filtered);
   }, [category, price, bikes]);
 
-  console.log(filteredBikes);
+  // console.log(filteredBikes);
 
   return (
     <section className='min-h-[1200px] py-10'>

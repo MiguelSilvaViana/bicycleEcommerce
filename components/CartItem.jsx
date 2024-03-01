@@ -6,7 +6,7 @@ import { useShoppingCart } from 'use-shopping-cart';
 import { FaPlus, FaMinus, FaX } from 'react-icons/fa6';
 const CartItem = ({ item }) => {
   const { removeItem, incrementItem, decrementItem } = useShoppingCart();
-  console.log(item);
+  // console.log(item);
   return (
     <div className='flex justify-between w-full mb-4 items-center h-[120px] border-b'>
       {/* image */}
